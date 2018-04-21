@@ -1,4 +1,4 @@
-{% extends "poem_app/poem_delete.html" %}
+{% extends "poem_app/base_poem.html" %}
 {% block title %}
 {{ block.super }} - Delete
 {% endblock title %}
@@ -8,6 +8,6 @@
     {% csrf_token %}
     <p>Are you sure you want to delete {{poem.title}} by {{poem.poet}} </p>
     <button class="btn btn-warning" type="submit">Yes</button>
-    <button class="btn btn-default" type="button"><a href="{{poem.get_absloute_url}}">No</a></button>
+    <button class="btn btn-default" type="button"><a href="{{poem.get_absolute_url}}">No</a></button>
 </form>
 {% endblock content %}

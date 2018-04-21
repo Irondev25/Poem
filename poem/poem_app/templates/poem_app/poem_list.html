@@ -5,6 +5,7 @@
 
 {% block content %}
 <div class="jumbotron">
+    <h1>List of poems available</h1>
     <ul>
         {% for poem in poems %}
         <li><a href="{{poem.get_absolute_url}}">{{poem.title}} by {{poem.poet}}</a></li>

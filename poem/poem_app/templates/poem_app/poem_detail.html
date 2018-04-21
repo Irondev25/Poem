@@ -4,9 +4,11 @@
 {% endblock title %}
 
 {% block content %}
-<div class="jumbotron">
+<div class="container">
     <h1>{{poem.title}}</h1>
     <h3>by {{poem.poet}}</h3>
+    <br>
+    <br>
     <h2>
         {{poem.poem|linebreaks}}
     </h2>   
