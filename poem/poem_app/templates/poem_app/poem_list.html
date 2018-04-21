@@ -1,0 +1,16 @@
+{% extends "poem_app/base_poem.html" %}
+{% block title %}
+{{ block.super }} - List
+{% endblock title %}
+
+{% block content %}
+<div class="jumbotron">
+    <ul>
+        {% for poem in poems %}
+        <li><a href="{{poem.get_absolute_url}}">{{poem.title}} by {{poem.poet}}</a></li>
+        {% empty %}
+        <li><em>No Poem available</em></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}

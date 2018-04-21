@@ -1,0 +1,16 @@
+{% extends "poem_app/base_poem.html" %} 
+{% block title %} 
+{{ block.super }} - {{poem.title}} 
+{% endblock title %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>{{poem.title}}</h1>
+    <h3>by {{poem.poet}}</h3>
+    <h2>
+        {{poem.poem|linebreaks}}
+    </h2>   
+    <button type="button" class="btn btn-warning"><a href="{{poem.get_delete_url}}">Delete Poem</a></button>
+    <button type="button" class="btn btn-primary"><a href="{{poem.get_update_url}}">Update Poem</a></button>
+</div>
+{% endblock content %}

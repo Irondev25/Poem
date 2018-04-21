@@ -1,0 +1,11 @@
+{% extends "poem_app/base_poem.html" %}
+{% block title %}
+{{ block.super }} - Update Poem
+{% endblock title %}
+{% block content %}
+<form action="{{poem.get_update_url}}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-primary" type="submit">Update Poem</button>
+</form>
+{% endblock content %}
